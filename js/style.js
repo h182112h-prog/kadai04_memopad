@@ -12,9 +12,8 @@ $("#save").on("click", function(){
     const html =`
       <tr>
         <td>${date}</td>
-        <td>${camp_name}</td>
+        <td><a href="${url}" target="_blank">${camp_name}</a></td>
         <td>${prefectures}</td>
-        <td><a href="${url}" target="_blank">Click</a></td>
       </tr>
       
     `;
@@ -35,9 +34,8 @@ for(let i = 0; i < localStorage.length; i++){
     const html = `
       <tr>
         <td>${value[0]}</td>
-        <td>${value[1]}</td>
+        <td><a href="${value[3]}" target="_blank">${value[1]}</a></td>
         <td>${value[2]}</td>
-        <td><a href="${value[3]}" target="_blank">Click</a></td>
       </tr>
     `;
     $("#list").append(html);

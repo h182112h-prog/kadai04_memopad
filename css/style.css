@@ -1,9 +1,157 @@
-table {
-border: 1px solid #333;/* テーブル全体に枠線 */
-border-collapse: collapse; /* セル間の線を重ねて表示 */
+
+/* 入力エリアスタイル */
+#input_zone {
+    background: rgba(255, 248, 231, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 1000px;
+    border: 3px solid #8b4513;
+    display:flex;
 }
 
-th,
+#input_zone input {
+    width: calc(33% - 20px);
+    padding: 12px 15px;
+    margin: 8px 5px;
+    border: 2px solid #8b4513;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+#input_zone input:focus {
+    outline: none;
+    border-color: #ff7c00;
+    box-shadow: 0 0 8px rgba(255, 124, 0, 0.4);
+    background: #fffef5;
+}
+
+#input_zone input::placeholder {
+    color: #a67c52;
+    opacity: 0.7;
+}
+
+/* 登録ボタンスタイル */
+
+#title{
+    display:flex;
+    justify-content:center;
+
+}
+
+#title_image{
+    height:auto;
+    width: 20%;
+}
+
+body{
+    /* background-image: url(/image/bg_image_4.jpg);
+    background-repeat:no-repeat;
+    background-size: 100%; */
+    background-color:#6ECF5A;
+}
+
+#save_zone{
+    display:flex;
+    justify-content:center;
+}
+
+#save{
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #ff7c00, #ffb366);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#save:hover{
+    background: #d9541f;
+
+}
+
+
+
+
+
+
+
+
+/* テーブルスタイル */
+table {
+    width: 95%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+th {
+    background: linear-gradient(145deg, #8b4513, #6b3410);
+    color: #fff8e7;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+}
+
 td {
-border: 1px solid #333;/* 見出しセルとデータセルに枠線 */
+    padding: 15px;
+    border-bottom: 1px solid #e0d5b7;
+    background: #fff8e7;
+    transition: background 0.3s;
+}
+
+tr:hover td {
+    background: #ffe4b5;
+}
+
+/* リンクスタイル */
+td a {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    color: #d9541f;
+    text-decoration: underline;
+}
+
+/* クリアボタンスタイル */
+
+#clear_zone{
+    display:flex;
+    justify-content:center;
+    margin-bottom: 2%;
+}
+
+
+#clear{
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #ff7c00, #ffb366);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#clear:hover{
+    background: #d9541f;
+
 }
