@@ -10,12 +10,13 @@ $("#save").on("click", function(){
 
     localStorage.setItem(date, JSON.stringify([date,camp_name,prefectures,url]));
     const html =`
-    <ul>
-        <li>${date}</li>
-        <li>${camp_name}</li>
-        <li>${prefectures}</li>
-        <li><a href="${url}" target="_blank">所在地</a></li>
-    </ul>
+      <tr>
+        <td>${date}</td>
+        <td>${camp_name}</td>
+        <td>${prefectures}</td>
+        <td><a href="${url}" target="_blank">Click</a></td>
+      </tr>
+      
     `;
     $("#list").append(html);
 }
@@ -32,12 +33,12 @@ for(let i = 0; i < localStorage.length; i++){
     const key = localStorage.key(i);
     const value = JSON.parse(localStorage.getItem(key));
     const html = `
-    <ul>
-        <li>${value[0]}</li>
-        <li>${value[1]}</li>
-        <li>${value[2]}</li>
-        <li><a href="${value[3]}" target="_blank">所在地</a></li>
-    </ul>
+      <tr>
+        <td>${value[0]}</td>
+        <td>${value[1]}</td>
+        <td>${value[2]}</td>
+        <td><a href="${value[3]}" target="_blank">Click</a></td>
+      </tr>
     `;
     $("#list").append(html);
 }
